@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">My Maal</string>
+    <string name="title_activity_main">My Maal</string>
+    <string name="package_name">com.mymaal.app</string>
+    <string name="custom_url_scheme">com.mymaal.app</string>
+</resources>

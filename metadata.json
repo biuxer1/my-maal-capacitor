@@ -1,0 +1,6 @@
+{
+  "name": "Maal Pay",
+  "description": "Secure, fast, and reliable global remittance and money transfers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
