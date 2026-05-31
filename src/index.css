@@ -84,3 +84,69 @@
 input, select, textarea {
   font-smoothing: antialiased;
 }
+
+/* === MYMAAL_CAPACITOR_MOBILE_FIX_START === */
+
+/* iPhone / Capacitor / PWA safe-area protection */
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #f8fafc;
+  -webkit-text-size-adjust: 100%;
+  overscroll-behavior: none;
+}
+
+/* Prevent iOS Safari / WebView input zoom */
+input,
+textarea,
+select {
+  font-size: 16px !important;
+  -webkit-text-size-adjust: 100% !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 16px !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  font-size: 16px !important;
+  transform: none !important;
+  zoom: 1 !important;
+}
+
+/* Keep tappable controls smooth on mobile */
+button,
+a,
+[role="button"] {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Safe-area utility classes for iPhone notch/home indicator */
+.mymaal-safe-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.mymaal-safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Bottom navigation protection if the app uses fixed bottom nav */
+.fixed.bottom-0,
+[class*="bottom-0"] {
+  padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+/* Prevent accidental horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* === MYMAAL_CAPACITOR_MOBILE_FIX_END === */
